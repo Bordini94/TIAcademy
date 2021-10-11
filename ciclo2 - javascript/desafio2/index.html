@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="site2.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="script/script.js"></script>
+	<title>Desafio 2 - Ciclo 2</title>
+</head>
+<style>
+    *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #fff;
+}
+
+header{
+	position: absolute;
+	z-index: 0;
+	width: 100%;
+	height: 200px;
+	background-image: linear-gradient( to right, #0D47A1, #3D5AFE, #2196F3);
+	display: flex;
+	flex-direction: column;
+	border-bottom: 4px solid #fff;
+}
+
+header > h1 {
+	padding: 5px;
+	color: #fff;
+	text-align: center;
+	font-family: Verdana, arial, cursive;
+	margin-top: 40px;
+
+}
+
+header > h2{
+	color: #fff;
+	width: 100%;
+	height: 40px;
+	font-family: Verdana, arial, cursive;
+	text-align: center;
+	font-size: 14px;
+}
+
+main{
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: auto;
+	top: 230px;
+	
+}
+
+#conteudo-geral{
+	width: 80%;
+	margin: 0 auto;
+	flex-direction: column;
+}
+
+.box-custom{
+	width: 100%;
+	height: auto;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+form{
+	width: 400px;
+	height: auto;
+	padding: 10px;
+	}
+
+form > label{
+	width: 100%;
+	height: auto;
+	padding: 4px;
+	display: flex;
+	flex-direction: column;
+	font-family: Verdana, cursive;
+}
+
+form > label > input[type=text]{
+	font-size: 14px;
+	border: none;
+	padding: 4px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.flex{
+	display: flex;
+}
+
+.display-btn{
+	width: 100%;
+	height: auto;
+	padding: 4px;
+}
+
+.justify-content{
+	justify-content: center;
+}
+
+.btn{
+	padding: 8px;
+	width: 100%;
+	height: 1px solid #000;
+	border-radius: 5px;
+	background-color: #2196F3;
+	color: #fff;
+	border: none;
+    box-shadow: 1px 2px #0D47A1;
+    cursor: pointer;
+
+}
+
+#logo-principal{
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	background-color: #fff;
+	align-items: center;
+}
+
+#logo-principal .logo{
+	font-size: 85px;
+    color: #2196F3;
+}
+
+#content-base{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 140px;
+	justify-content: center;
+
+
+}
+</style>
+<body>
+	<header>
+		<h1>ME ACHA!</h1>
+		<h2>ENCONTRE UM ENDEREÇO PELO NÚMERO DE CEP</h2>
+		
+		<div id="content-base" class="flex justify-content">
+				<div id="logo-principal" class="flex justify-content">
+					<span class="material-icons logo">
+						travel_explore
+					</span>
+				</div>
+		</div>
+	
+	</header>
+		<main>
+
+			<div id="conteudo-geral flex justify-content">
+				<div class="box-custom flex justify-content">
+					<form>
+						<label>Cep
+							<input type="text" class="cxCep"  name="cep" required>
+						</label>
+						<label>Rua
+							<input type="text" id="logradouro" name="rua" readonly>
+						</label>
+						<label>Bairro
+							<input type="text" id="bairro" name="bairro" readonly>
+						</label>
+						<label>Cidade
+							<input type="text" id="localidade" name="cidade" readonly>
+						</label>
+						<label>UF
+							<input type="text" id="uf" name="uf" readonly>
+						</label>
+						<div class="display-btn flex justify-content">
+							<input class="btn" type="button" value="BUSCAR" name="btnBuscaCep" id="btnBuscaCep">
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+	<footer></footer>
+</body>
+</html>
